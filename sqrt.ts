@@ -25,7 +25,7 @@ export default function sqrt(
   let guess = initialGuess;
 
   while (guess * guess - n > precision || guess * guess - n < -precision) {
-    guess = (guess * guess - n) / (2 * guess);
+    guess -= (guess * guess - n) / (2 * guess);
   }
 
   return guess;
